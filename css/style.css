@@ -1,0 +1,92 @@
+html, body 
+{ 
+	margin: 0;
+   height: 100%;
+}
+
+a {
+   outline: 0;
+}
+
+a:active,
+a:focus { 
+    outline: 0;
+}
+
+.overlay {
+   background: #bebebe;
+   height: 80px;
+}
+
+#container1 {
+   display: flex;
+   height: 100%;
+}
+input[type=checkbox] {
+   position: absolute;
+   opacity: 0;
+}
+label {
+   position: absolute;
+   top: 20px;
+   left: 20px;
+   z-index: 1;
+   display: block;
+   font-size:3em;
+   color: #444;
+   cursor: pointer;
+   width:30px;
+   height:20px;
+   margin-top: 12.5px;
+   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='3'/><rect y='14' width='30' height='3'/><rect y='7' width='30' height='3'/></svg>");
+
+   transform: translate3d(0, 0, 0);
+   transition: transform .4s;
+}
+input[type=checkbox]:checked ~ label {
+   transform: translate3d(200px, 0, 0) rotate(90deg);
+}
+.content1 {
+   width:100%;
+   transform: translate3d(0, 0, 0);
+   transition: transform .4s;
+}
+input[type=checkbox]:checked ~ .content1 {
+   transform: translate3d(0px, 0, 0);
+   opacity: 0.6;
+
+}
+input[type=checkbox]:checked ~ .slide-menu {
+   transform: translate3d(0, 0, 0);
+}
+input[type=checkbox]:checked ~ .slide-menu .slidemenu li {
+   width: 100%;
+}
+.slide-menu {
+   transform: translate3d(-250px, 0, 0);
+   position: absolute;
+   width: 200px;
+   background: black;
+   color: #ddd;
+   left: 0;
+   height: 100%;
+   transition: all .4s;
+}
+.slide-menu h1 {
+   margin: 10px;
+   text-shadow: 1px 1px 1px #000;
+}
+.slidemenu {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+.slidemenu a {
+   display: block;
+   text-decoration: none;
+   color: #fff;
+   padding: 15px;
+}
+.slidemenu a:hover {
+  color: #bebebe;
+}

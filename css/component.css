@@ -1,0 +1,142 @@
+/*For menu on the top*/
+/* Common styles for all menus */
+.menu {
+	line-height: 1;
+	
+}
+
+.menu__list {
+	position: relative;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.menu__item1,
+.menu__item2,
+.menu__item3,
+.menu__item4, {
+	display: block;
+	margin: 1em 0;
+}
+
+.menu__link {
+	font-size: 1.05em;
+	font-weight: bold;
+	display: block;
+	padding: 1em;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.menu__link:hover,
+.menu__link:focus {
+	outline: none;
+}
+
+/* Prospero */
+.menu--prospero .menu__link {
+	position: relative;
+	display: block;
+	text-decoration: none;
+	margin: 0 20px; /*for spacing between the options use this*/
+	padding: 0.75em 0;
+	text-align: center;
+	color: black;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.menu--prospero .menu__link:hover,
+.menu--prospero .menu__link:focus {
+	color: #929292;
+}
+
+.menu--prospero .menu__item--current .menu__link {
+	color: #d94f5c;
+}
+
+.menu--prospero .menu__link::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background: #d94f5c;
+	-webkit-transform: scale3d(0, 1, 1);
+	transform: scale3d(0, 1, 1);
+	-webkit-transition: -webkit-transform 0.1s;
+	transition: transform 0.1s;
+}
+
+.menu--prospero .menu__item--current .menu__link::before {
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+	-webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+
+/* Stack items for smaller screens */
+/*@media screen and (max-width:45em) {
+	.menu__list {
+		display: none;
+		margin: 0 auto;
+	}
+*/
+@media screen and (max-width:70em)	
+
+{
+	#menu-list li.menu__item4{
+		display:none;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width:63em)	
+
+{
+	#menu-list li.menu__item3
+	{
+		display:none;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width:50em)	
+
+{
+	#menu-list li.menu__item2
+	{
+		display:none;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width:45em)	
+
+{
+	#menu-list li.menu__item1
+	{
+		display:none;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width:40em)	
+
+{
+	.menu__list
+	{
+		display:none;
+		margin: 0 auto;
+	}
+}

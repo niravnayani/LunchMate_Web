@@ -1,0 +1,102 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+
+	<title>LunchMate</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+
+</head>
+
+<body>
+
+<div id="container1">
+
+<input id="toggle" type="checkbox"><label for="toggle"></label>
+
+  
+<div class="content1"> 
+  	<div class="overlay">
+        	<img style="width:200px;height:50px;margin-left:70px;margin-top:13px;" alt="Brand" src="images/logo1.png">
+  			<section class="section section--menu" id="Prospero">
+				<nav class="menu menu--prospero">
+					<ul class="menu__list" id="menu-list">
+						<li class="menu__item menu__item--current"><a href="#" class="menu__link">Home</a></li>
+						<li class="menu__item1"><a href="#" class="menu__link">Profile</a></li>
+						<li class="menu__item2"><a href="#" class="menu__link">Settings</a></li>
+						<li class="menu__item3"><a href="#" class="menu__link">Upcoming Lunches</a></li>
+						<li class="menu__item4"><a href="#" class="menu__link">About Us</a></li>
+					</ul>
+				</nav>
+			</section>
+	</div>
+</div>
+
+<div class="slide-menu">
+    <nav class="slidemenu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Upgrade to Premium</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Upcoming Lunches</a></li>
+      <li><a href="#">Pending Lunch Requests</a></li>
+      <li><a href="#">History</a></li>
+      <li><a href="#">Connected LunchMates</a></li>
+      <li><a href="#">My LM Reward Points</a></li>
+      <li><a href="#">Help</a></li>
+      <li><a href="#">About Us</a></li>
+    </nav>
+  </div>
+  </div>
+		<!-- top-menu -->
+		<script src="js/classie.js"></script>
+		<script src="js/clipboard.min.js"></script>
+		<script>
+		(function() {
+			[].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+				var menuItems = menu.querySelectorAll('.menu__link'),
+					setCurrent = function(ev) {
+						ev.preventDefault();
+
+						var item = ev.target.parentNode; // li
+
+						// return if already current
+						if (classie.has(item, 'menu__item--current')) {
+							return false;
+						}
+						// remove current
+						classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+						// set current
+						classie.add(item, 'menu__item--current');
+					};
+
+				[].slice.call(menuItems).forEach(function(el) {
+					el.addEventListener('click', setCurrent);
+				});
+			});
+
+			[].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
+				link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+				new Clipboard(link);
+				link.addEventListener('click', function() {
+					classie.add(link, 'link-copy--animate');
+					setTimeout(function() {
+						classie.remove(link, 'link-copy--animate');
+					}, 300);
+				});
+			});
+		})(window);
+		</script>
+
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
