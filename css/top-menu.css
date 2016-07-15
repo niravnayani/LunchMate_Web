@@ -1,0 +1,301 @@
+/*For menu on the top*/
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: '';
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	text-decoration: none;
+	color: #4e3c3e;
+	outline: 0;
+}
+
+a:hover,
+a:focus {
+	outline: 0;
+}
+
+.hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+.info {
+	font-size: 0.85em;
+	font-weight: bold;
+	line-height: 36px;
+	margin: 5em 0 0;
+	color: #9c9898;
+}
+
+@-webkit-keyframes pulse {
+	from {
+		opacity: 1;
+		-webkit-transform: scale3d(0, 0, 1);
+		transform: scale3d(0, 0, 1);
+	}
+
+	to {
+		opacity: 0;
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+
+}
+
+@keyframes pulse {
+	from {
+		opacity: 1;
+		-webkit-transform: scale3d(0, 0, 1);
+		transform: scale3d(0, 0, 1);
+	}
+
+	to {
+		opacity: 0;
+		transform: scale3d(1, 1, 1);
+		webkit-transform: scale3d(1, 1, 1);
+	}
+
+}
+
+@keyframes octocat-wave {
+	0%,
+	100% {
+		transform: rotate(0);
+	}
+
+	20%,
+	60% {
+		transform: rotate(-25deg);
+	}
+
+	40%,
+	80% {
+		transform: rotate(10deg);
+	}
+
+}
+
+/* Content */
+
+.section {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.section:nth-of-type(odd):not(:first-child) {
+	color: #fff;
+}
+
+.section--menu {
+	position: relative;
+	margin-top: -43px;
+	overflow: hidden;
+}
+
+.break {
+	padding: 3em 0;
+	text-align: center;
+	background: #d94f5c;
+}
+
+.section__title {
+	font-size: 0.65em;
+	font-weight: 700;
+	-webkit-flex: none;
+	flex: none;
+	margin: 3em 0 15em;
+	text-indent: 3px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: #d1d1d1;
+}
+
+.break__title {
+	font-size: 1.85em;
+	font-weight: normal;
+	margin: 0;
+	color: #fff;
+}
+
+.section--intro {
+	font-size: 2em;
+	position: relative;
+	min-height: 100vh;
+	text-align: center;
+	color: #fff;
+}
+
+.section--intro p {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 1em;
+}
+
+
+.menu {
+	line-height: 1;
+	
+}
+
+.menu__list {
+	position: relative;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.menu__item1,
+.menu__item2,
+.menu__item3,
+.menu__item4, {
+	display: block;
+	margin: 1em 0;
+}
+
+.menu__link {
+	font-size: 1.05em;
+	font-weight: bold;
+	display: block;
+	padding: 1em;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.menu__link:hover,
+.menu__link:focus {
+	outline: 0;
+}
+
+.menu--prospero .menu__link {
+	position: relative;
+	display: block;
+	text-decoration: none;
+	margin: 0 20px;     /*for spacing between the options use this*/
+	padding: 0.75em 0;
+	text-align: center;
+	color: black;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.menu--prospero .menu__link:hover,
+.menu--prospero .menu__link:focus {
+	color: #929292;
+}
+
+.menu--prospero .menu__item--current .menu__link {
+	color: #d94f5c;
+}
+
+.menu--prospero .menu__link::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background: #d94f5c;
+	-webkit-transform: scale3d(0, 1, 1);
+	transform: scale3d(0, 1, 1);
+	-webkit-transition: -webkit-transform 0.1s;
+	transition: transform 0.1s;
+}
+
+.menu--prospero .menu__item--current .menu__link::before {
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+	-webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+
+/* Stack items for smaller screens */
+/*@media screen and (max-width:45em) {
+	.menu__list {
+		display: none;
+		margin: 0 auto;
+	}
+*/
+@media screen and (max-width:70em)	
+
+{
+	#menu-list li.menu__item4{
+		display:none;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width:63em)	
+
+{
+	#menu-list li.menu__item3
+	{
+		display:none;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width:50em)	
+
+{
+	#menu-list li.menu__item2
+	{
+		display:none;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width:45em)	
+
+{
+	#menu-list li.menu__item1
+	{
+		display:none;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width:40em)	
+
+{
+	#menu-list
+	{
+		display:none;
+		margin: 0 auto;
+	}
+}
