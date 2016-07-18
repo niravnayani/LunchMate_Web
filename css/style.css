@@ -107,11 +107,7 @@ input[type=checkbox]:checked ~ .slide-menu .slidemenu li {
    }
 }
 
-@media screen and (max-width:40em)  
-
-{
-   #change-location
-   {
-      margin-left: 0px;
-   }
+.col-centered{
+    float: none;
+    margin: 0 auto;
 }
