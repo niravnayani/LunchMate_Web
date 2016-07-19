@@ -29,7 +29,21 @@ input[type=checkbox] {
    position: absolute;
    opacity: 0;
 }
-label {
+ .videoContainer 
+{
+    position:absolute;
+    height:100%;
+    width:100%;
+}
+
+.videoContainer video 
+{
+    min-width: 100%;
+    min-height: 100%;
+    --max-height: px;
+    --padding: 5% 5% % 5%
+}
+.l {
    position: absolute;
    top: 20px;
    left: 20px;
@@ -46,26 +60,27 @@ label {
    transform: translate3d(0, 0, 0);
    transition: transform .4s;
 }
-input[type=checkbox]:checked ~ label {
-   transform: translate3d(200px, 0, 0) rotate(90deg);
+input[id=toggle]:checked ~ label {
+   transform: translate3d(0, 0, 0) rotate(90deg);
 }
 .menu-content {
    width:100%;
    transform: translate3d(0, 0, 0);
    transition: transform .4s;
 }
-input[type=checkbox]:checked ~ .menu-content {
+input[id=toggle]:checked ~ .menu-content {
    transform: translate3d(0, 0, 0);
    opacity: 0.6;
 
 }
-input[type=checkbox]:checked ~ .slide-menu {
+input[id=toggle]:checked ~ .slide-menu {
    transform: translate3d(0, 0, 0);
 }
-input[type=checkbox]:checked ~ .slide-menu .slidemenu li {
+input[id=toggle]:checked ~ .slide-menu .slidemenu li {
    width: 100%;
 }
 .slide-menu {
+    top:80px;
    transform: translate3d(-250px, 0, 0);
    position: absolute;
    width: 200px;
