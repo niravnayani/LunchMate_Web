@@ -1,0 +1,162 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>LunchMate</title>
+	
+    <link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/top-menu.css" />
+    
+</head>
+
+<body>
+
+<div class="container-fluid">
+<div id="menu-container">
+<input id="toggle" type="checkbox"><label for="toggle" class="l"></label>
+<div class="menu-content"> 
+  	<div class="overlay">
+        	<img style="width:200px;height:50px;margin-left:70px;margin-top:13px;" alt="Brand" src="images/logo1.png">
+            <button type="button" style="margin-top:20px;margin-right:25px"class="btn btn-primary pull-right">Register</button>
+  			<section class="section section--menu" id="Prospero">
+				<nav class="menu menu--prospero">
+					<ul class="menu__list" id="menu-list">
+						<li class="menu__item menu__item--current"><a href="#" class="menu__link">Home</a></li>
+						<li class="menu__item1"><a href="#" class="menu__link">Profile</a></li>
+						<li class="menu__item2"><a href="#" class="menu__link">Settings</a></li>
+						<li class="menu__item3"><a href="#" class="menu__link">Upcoming Lunches</a></li>
+						<li class="menu__item4"><a href="#" class="menu__link">About Us</a></li>
+					</ul>
+				</nav>
+			</section>
+	</div>
+    <br><br>
+<div class="row">
+    <div class="col-md-2 col-md-offset-2"></div>
+    <div class="col-md-4 text-center" ><button type="button" class="btn btn-primary">Sign In Via LinkedIn
+      <img style="width:30px;height:30px;margin-left:10px;" src="images/Social-Networks-Linkedin-icon.png"></button>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+    <br>
+<div class="row">
+    <div class="col-md-2 col-md-offset-2"></div>
+    <div class="col-md-4 text-center" ><button type="button" class="btn btn-primary">Sign In Via Facebook
+      <img style="width:30px;height:30px;margin-left:10px;" src="images/facebook-symbol_318-37686.png"></button>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<div class="row">
+    <div class="col-md-2 col-md-offset-2"></div>
+    <div class="col-md-4 text-center" >
+        <h1 style="font-family: 'Roboto', sans-serif;">Or</h1>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<div class="row">
+    <div class="col-md-2 col-md-offset-2"></div>
+    <div class="col-md-4 text-center" >
+        <INPUT TYPE="TEXT" SIZE="40" class="form-control" NAME="email" placeholder="Email address *" REQUIRED />
+    </div>
+    <div class="col-md-2"></div>
+</div>
+    <br>
+<div class="row">
+    <div class="col-md-2 col-md-offset-2"></div>
+    <div class="col-md-4 text-center" >
+        <INPUT TYPE="password" SIZE="40" class="form-control" NAME="password" placeholder="password *" REQUIRED />
+    </div>
+    <div class="col-md-2"></div>
+</div>
+    <br>
+<div class="row">
+    <div class="col-md-2 col-md-offset-2"></div>
+    <div class="col-md-2">
+        <div class="checkbox">
+        <label><input type="checkbox"> Remember me</label>
+      </div>
+    </div>
+    <div class="col-md-2" >
+        <div style="padding-top:10px"><a style="text-decoration:underline" href="#">Forget Username/Password?</a></div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+    <br>
+<div class="row">
+    <div class="col-md-2 col-md-offset-2"></div>
+    <div class="col-md-4 text-center" ><button type="button" class="btn btn-primary">Sign In</button>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+    </div>
+    
+
+<div class="slide-menu">
+    <nav class="slidemenu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Upgrade to Premium</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Upcoming Lunches</a></li>
+      <li><a href="#">Pending Lunch Requests</a></li>
+      <li><a href="#">History</a></li>
+      <li><a href="#">Connected LunchMates</a></li>
+      <li><a href="#">My LM Reward Points</a></li>
+      <li><a href="#">Help</a></li>
+      <li><a href="#">About Us</a></li>
+    </nav>
+  </div>
+</div>
+
+</div>
+		<!-- top-menu -->
+		<script src="js/classie.js"></script>
+		<script src="js/clipboard.min.js"></script>
+		<script>
+		(function() {
+			[].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+				var menuItems = menu.querySelectorAll('.menu__link'),
+					setCurrent = function(ev) {
+						ev.preventDefault();
+
+						var item = ev.target.parentNode; // li
+
+						// return if already current
+						if (classie.has(item, 'menu__item--current')) {
+							return false;
+						}
+						// remove current
+						classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+						// set current
+						classie.add(item, 'menu__item--current');
+					};
+
+				[].slice.call(menuItems).forEach(function(el) {
+					el.addEventListener('click', setCurrent);
+				});
+			});
+
+			[].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
+				link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+				new Clipboard(link);
+				link.addEventListener('click', function() {
+					classie.add(link, 'link-copy--animate');
+					setTimeout(function() {
+						classie.remove(link, 'link-copy--animate');
+					}, 300);
+				});
+			});
+		})(window);
+		</script>
+
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
