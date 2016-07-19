@@ -28,6 +28,7 @@ input[type=text]:focus, textarea:focus {
   left: 0;
   padding: 4px;
   height: 46px;
+  width: 185px;
   font-size: 18px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
