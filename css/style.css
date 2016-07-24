@@ -18,6 +18,74 @@ a:focus {
    height: 80px;
 }
 
+/* added by deepak */
+
+form {
+    /* Just to center the form on the page */
+    margin: 0 auto;
+    width: 400px;
+    /* To see the outline of the form */
+    padding: 1em;
+    
+}
+form div + div {
+    margin-top: 1em;
+}
+
+label {
+    /* To make sure that all labels have the same size and are properly aligned */
+    display: inline-block;
+    width: 110px;
+    text-align: left;
+}
+
+section {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+}
+#one {
+    width: 50%;
+    float: left;
+}
+#two {
+    padding-top: 100px;
+    width: 50%;
+   float:right;
+    
+}
+
+input {
+    border: 2px solid #a1a1a1;
+    padding-left: 10px;
+    background: #ddddde;
+   
+    border-radius: 8px;
+}
+
+
+#images 
+{
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+}
+#first_user 
+{
+float:right;
+}
+#second_user 
+{
+   float:right;  
+}
+
+#third_user 
+{
+    float:right;
+}
+
+
+    
 /*--------------------------------------------------------------------------------------------------*/
 /*  Slide menu css ----- Start  */
 
