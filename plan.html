@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/top-menu.css" />
+	<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
 
 </head>
 
@@ -20,10 +21,10 @@
 
 <div class="container-fluid">
 <div id="menu-container">
-<input id="toggle" type="checkbox"><label for="toggle"></label>
+<input id="toggle" type="checkbox"><label for="toggle" class="l"></label>
 <div class="menu-content"> 
   	<div class="overlay">
-        	<img style="width:200px;height:50px;margin-left:70px;margin-top:13px;" alt="Brand" src="images/logo1.png">
+        	<img id="logo" alt="Brand" src="images/logo.png">
   			<section class="section section--menu" id="Prospero">
 				<nav class="menu menu--prospero">
 					<ul class="menu__list" id="menu-list">
@@ -67,8 +68,8 @@
         <td>Feature 1</td>
       </tr>
       <tr>
-        <td><button type="button" class="btn btn-primary btn-sm" style="width:50dp">Free</button></td>
-        <td><button type="button" class="btn btn-primary btn-sm">Premium</button></td>
+        <td><button type="button" class="btn btn-primary" style="width:83px;">Free</button></td>
+        <td><button type="button" class="btn btn-primary">Premium</button></td>
       </tr>
 
     </tbody>

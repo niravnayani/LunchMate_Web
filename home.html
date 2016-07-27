@@ -1,4 +1,4 @@
-<!doctype html>
+	<!doctype html>
 
 <html lang="en">
 <head>
@@ -8,7 +8,6 @@
 	<title>LunchMate</title>
 	
 	<link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
 	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/datepicker.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -16,6 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/top-menu.css" />
+	<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
 
 </head>
 
@@ -26,42 +26,21 @@
 <input id="toggle" type="checkbox"><label for="toggle" class="l"></label>
 <div class="menu-content"> 
   	<div class="overlay">
-        	<img style="width:200px;height:50px;margin-left:70px;margin-top:13px;" alt="Brand" src="images/logo1.png">
-            <button type="button" style="margin-top:20px;margin-right:25px"class="btn btn-primary pull-right"><span class="glyphicon glyphicon-user"></span> Sign In</button>
-  			<section class="section section--menu" id="Prospero">
-				<nav class="menu menu--prospero">
-					<ul class="menu__list" id="menu-list">
-						<li class="menu__item menu__item--current"><a href="#" class="menu__link">Home</a></li>
-						<li class="menu__item1"><a href="#" class="menu__link">Profile</a></li>
-						<li class="menu__item2"><a href="#" class="menu__link">Settings</a></li>
-						<li class="menu__item3"><a href="#" class="menu__link">Upcoming Lunches</a></li>
-						<li class="menu__item4"><a href="#" class="menu__link">About Us</a></li>
-					</ul>
-				</nav>           
-			</section>
+        	<img id="logo" alt="Brand" src="images/logo.png">
+            <button type="button" style="margin-top:20px;margin-right:25px" class="btn btn-primary pull-right" id="signin"><span class="glyphicon glyphicon-user"></span> Sign In</button>
 	</div>
-<div class="videoContainer">
-      <video autoplay controls>
-  <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
-Your browser does not support the video tag.
-    </video></div>
-      
 
+	    <div class="vidcontainer"> 
+	    	<div class="vendor">
+        		<iframe src="http://player.vimeo.com/video/25708134?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0"></iframe>
+        	</div>
+        </div>
 </div>
     
 
 <div class="slide-menu">
     <nav class="slidemenu">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Upgrade to Premium</a></li>
-      <li><a href="#">Profile</a></li>
-      <li><a href="#">Settings</a></li>
-      <li><a href="#">Upcoming Lunches</a></li>
-      <li><a href="#">Pending Lunch Requests</a></li>
-      <li><a href="#">History</a></li>
-      <li><a href="#">Connected LunchMates</a></li>
-      <li><a href="#">My LM Reward Points</a></li>
-      <li><a href="#">Help</a></li>
+      <li><a href="#">Sign In</a></li>
       <li><a href="#">About Us</a></li>
     </nav>
   </div>
@@ -107,6 +86,15 @@ Your browser does not support the video tag.
 			});
 		})(window);
 		</script>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script src="js/jquery.fitvids.js"></script>
+      <script>
+        // Basic FitVids Test
+        $(".vidcontainer").fitVids();
+        // Custom selector and No-Double-Wrapping Prevention Test
+        $(".vidcontainer").fitVids({ customSelector: "iframe[src^='http://socialcam.com']"});
+      </script>
 
   <script src="js/bootstrap.min.js"></script>
 

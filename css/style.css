@@ -1,7 +1,19 @@
+*:focus {
+    outline: none;
+}
+
 html, body 
 { 
-	margin: 0;
-   height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  background: #ececec;
+  
 }
 
 a {
@@ -18,99 +30,68 @@ a:focus {
    height: 80px;
 }
 
-/* added by deepak */
-
-form {
-    /* Just to center the form on the page */
-    margin: 0 auto;
-    width: 400px;
-    /* To see the outline of the form */
-    padding: 1em;
-    
-}
-form div + div {
-    margin-top: 1em;
+.custom-btn {
+    width: 205px !important;
 }
 
-label {
-    /* To make sure that all labels have the same size and are properly aligned */
-    display: inline-block;
-    width: 110px;
-    text-align: left;
+.custom-input{
+    width: 205px !important;
 }
 
-section {
-    width: 100%;
-    margin: auto;
-    padding: 10px;
-}
-#one {
-    width: 50%;
-    float: left;
-}
-#two {
-    padding-top: 100px;
-    width: 50%;
-   float:right;
-    
+.custom-padding{
+    padding-left: 20px;
 }
 
-input {
-    border: 2px solid #a1a1a1;
-    padding-left: 10px;
-    background: #ddddde;
-   
-    border-radius: 8px;
+#logo{
+  width:200px;
+  height:50px;
+  margin-left:60px;
+  margin-top:13px;
 }
 
+/*settings checkbox disable label*/
 
-#images 
-{
-    width: 100%;
-    margin: auto;
-    padding: 10px;
-}
-#first_user 
-{
-float:right;
-}
-#second_user 
-{
-   float:right;  
+input[id=res1]:checked ~ label {
+   text-decoration: line-through;
+   color: #b7b7b7;
 }
 
-#third_user 
-{
-    float:right;
+input[id=res2]:checked ~ label {
+   text-decoration: line-through;
+   color: #b7b7b7;
+}
+
+input[id=res3]:checked ~ label {
+   text-decoration: line-through;
+   color: #b7b7b7;
+}
+
+input[id=res4]:checked ~ label {
+   text-decoration: line-through;
+   color: #b7b7b7;
+}
+
+input[id=res5]:checked ~ label {
+   text-decoration: line-through;
+   color: #b7b7b7;
 }
 
 
-    
-/*--------------------------------------------------------------------------------------------------*/
 /*  Slide menu css ----- Start  */
 
 #menu-container {
    display: flex;
    height: 100%;
 }
+
 input[type=checkbox] {
    position: absolute;
-   opacity: 0;
-}
- .videoContainer 
-{
-    position:absolute;
-    height:100%;
-    width:100%;
 }
 
-.videoContainer video 
-{
-    min-width: 100%;
-    min-height: 100%;
-    --max-height: px;
-    --padding: 5% 5% % 5%
-}
+ input[type="checkbox"]:focus{
+        outline:0;
+    }
+
 .l {
    position: absolute;
    top: 20px;
@@ -124,31 +105,38 @@ input[type=checkbox] {
    height:20px;
    margin-top: 12.5px;
    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='3'/><rect y='14' width='30' height='3'/><rect y='7' width='30' height='3'/></svg>");
-
    transform: translate3d(0, 0, 0);
    transition: transform .4s;
 }
-input[id=toggle]:checked ~ label {
-   transform: translate3d(0, 0, 0) rotate(90deg);
+
+input[id=toggle] {
+  display: none;
 }
+
+input[id=toggle]:checked ~ label {
+   transform: translate3d(200px, 0, 0) rotate(90deg);
+}
+
 .menu-content {
    width:100%;
    transform: translate3d(0, 0, 0);
    transition: transform .4s;
 }
+
 input[id=toggle]:checked ~ .menu-content {
-   transform: translate3d(0, 0, 0);
-   opacity: 0.6;
+   transform: translate3d(200px, 0, 0);
 
 }
+
 input[id=toggle]:checked ~ .slide-menu {
    transform: translate3d(0, 0, 0);
 }
+
 input[id=toggle]:checked ~ .slide-menu .slidemenu li {
    width: 100%;
 }
+
 .slide-menu {
-    top:80px;
    transform: translate3d(-250px, 0, 0);
    position: absolute;
    width: 200px;
@@ -158,27 +146,64 @@ input[id=toggle]:checked ~ .slide-menu .slidemenu li {
    height: 100%;
    transition: all .4s;
 }
+
 .slide-menu h1 {
    margin: 10px;
    text-shadow: 1px 1px 1px #000;
 }
+
 .slidemenu {
    list-style: none;
    padding: 0;
    margin: 0;
 }
+
 .slidemenu a {
    display: block;
    text-decoration: none;
    color: #fff;
    padding: 15px;
 }
+
 .slidemenu a:hover {
   color: #bebebe;
 }
 
-/*  Slide menu css ----- End  */
-/*--------------------------------------------------------------------------------------------------*/
+/* Video player start */
+
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe,
+embed,
+object {
+  max-width: 100%;
+}
+
+.vidcontainer {
+  width: 70%;
+  padding-top: 15px;
+  margin:0px auto;
+}
+
+.vendor {
+  background: #d1eed1;
+  margin-bottom: 2em;
+}
+
+.unsupported {
+  background: #fddfde;
+}
+
+.col-centered
+{
+    float: none;
+    margin: 0 auto;
+}
+
+/*media queries*/
 
 @media screen and (max-width:40em)  
 
@@ -190,7 +215,22 @@ input[id=toggle]:checked ~ .slide-menu .slidemenu li {
    }
 }
 
-.col-centered{
-    float: none;
-    margin: 0 auto;
+@media screen and (max-width:25em)  
+
+{
+   #register
+   {
+      display:none;
+      margin: 0 auto;
+   }
+}
+
+@media screen and (max-width:25em)  
+
+{
+   #signin
+   {
+      display:none;
+      margin: 0 auto;
+   }
 }
