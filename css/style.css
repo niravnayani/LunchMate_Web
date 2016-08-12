@@ -72,7 +72,6 @@ a:focus {
 
 .imagewrap {display:inline-block;position:relative;}
 
-
 .left-side{
   position:absolute;
   bottom:-15px;
@@ -90,6 +89,12 @@ a:focus {
   height:50px;
   margin-left:60px;
   margin-top:13px;
+}
+
+/*for google maps autocomplete*/
+.pac-container {
+    margin-top: 358px;
+    border-radius: 4px;
 }
 
 /*settings checkbox disable label*/
@@ -360,7 +365,7 @@ input[type=range]:focus::-ms-fill-upper {
 @media screen and (max-width:40em)  
 
 {
-   #googleMap
+   #map
    {
       display:none;
       margin: 0 auto;
