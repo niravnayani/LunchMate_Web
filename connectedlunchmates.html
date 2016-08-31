@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Home</title>
+	<title>Connected LunchMates</title>
 	
 	<link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -44,41 +44,51 @@
 	        </div>
             
             <div class="row">
-              <div class="well well-sm col-md-12 text-center" ><h3 style="font-family: 'Roboto', sans-serif;">Home</h3>
+              <div class="well well-sm col-md-12 text-center" ><h3 style="font-family: 'Roboto', sans-serif;">Connected LunchMates</h3>
               </div>
             </div>
             
             <div class="row">
-                <div class = "col-md-offset-2 col-md-3" style="font-family: 'Roboto', sans-serif;margin-top:50px;">
-                <img src="images/group.jpg" id="group" height="220"> 
-                <a href="grouplunch.html" class="btn btn-primary center-block" style="margin-bottom:10px;margin-top:40px;width:219.81px;" role="button">Request a Group Lunch</a>
+                <div class = "col-md-offset-4 col-md-4" style="font-family: 'Roboto', sans-serif;margin-top:50px;">
+                <table class="table table-hover">
+				    <tbody>
+				      <tr>
+				        <td><img src="images/profilepic.jpg" id="group" height="50"> </td>
+				        <td style="vertical-align: middle;">Nick Halden</td>
+				      </tr>
+				      <tr>
+				        <td><img src="images/profilepic.jpg" id="group" height="50"> </td>
+				        <td style="vertical-align: middle;">Peter</td>
+				      </tr>
+				      <tr>
+				        <td><img src="images/profilepic.jpg" id="group" height="50"> </td>
+				        <td style="vertical-align: middle;">Alex</td>
+				      </tr>
+				    </tbody>
+				  </table>
                 </div>
-                <div class = "col-md-offset-2 col-md-3" style="font-family: 'Roboto', sans-serif;margin-top:50px;">
-                <img src="images/oneonone.jpg" id="oneonone" height="220"> 
-                <a href="oneonone.html" class="btn btn-primary center-block" style="margin-bottom:10px;margin-top:40px;" role="button">Search for a 1-on-1 LunchMate</a>
-            	</div>
-        	</div>
+            </div>
+        </div>
 
-        
+        <div class="slide-menu">
+            <nav class="slidemenu">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="payment.html">Upgrade to Premium</a></li>
+              <li><a href="profile.html">Profile</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="upcominglunches.html">Upcoming Lunches</a></li>
+              <li><a href="pendingrequests.html">Pending Lunch Requests</a></li>
+              <li><a href="rate.html">Rate & Connect</a></li>
+              <li><a href="#">History</a></li>
+              <li><a href="connectedlunchmates.html">Connected LunchMates</a></li>
+              <li><a href="#">My LM Reward Points</a></li>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">About Us</a></li>
+            </nav>
+        </div>
     </div>  
-    <div class="slide-menu">
-		    <nav class="slidemenu">
-		      <li><a href="home.html">Home</a></li>
-		      <li><a href="payment.html">Upgrade to Premium</a></li>
-		      <li><a href="profile.html">Profile</a></li>
-		      <li><a href="#">Settings</a></li>
-		      <li><a href="upcominglunches.html">Upcoming Lunches</a></li>
-		      <li><a href="pendingrequests.html">Pending Lunch Requests</a></li>
-		      <li><a href="rate.html">Rate & Connect</a></li>
-		      <li><a href="#">History</a></li>
-		      <li><a href="connectedlunchmates.html">Connected LunchMates</a></li>
-		      <li><a href="#">My LM Reward Points</a></li>
-		      <li><a href="#">Help</a></li>
-		      <li><a href="#">About Us</a></li>
-		    </nav>
-		  </div>
 </div>
-</div>
+
 		<!-- top-menu -->
 		<script src="js/classie.js"></script>
 		<script src="js/clipboard.min.js"></script>
@@ -133,7 +143,6 @@
 		$('.menu__item4 a').on('click',function() {           
         window.location.href = "#";  // Change This
 		});
-
 		</script>
 </body>
 </html>

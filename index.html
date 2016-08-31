@@ -1,0 +1,103 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>LunchMate</title>
+	
+	<link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/datepicker.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/top-menu.css" />
+	<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container-fluid" >
+<div id="menu-container">
+<input id="toggle" type="checkbox"><label for="toggle" class="l"></label>
+<div class="menu-content"> 
+  	<div class="overlay">
+        	<img id="logo" alt="Brand" src="images/logo.png">
+            <a href="signin.html" style="margin-top:20px;margin-right:25px" class="btn btn-primary pull-right" id="signin" role="button"><span class="glyphicon glyphicon-user"></span>Sign In</a>
+	</div>
+
+	    <div class="vidcontainer"> 
+	    	<div class="vendor">
+        		<iframe src="http://player.vimeo.com/video/25708134?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0"></iframe>
+        	</div>
+        </div>
+</div>
+    
+
+<div class="slide-menu">
+    <nav class="slidemenu">
+      <li><a href="signin.html">Sign In</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="#">About Us</a></li>
+    </nav>
+  </div>
+</div>
+
+</div>
+		<!-- top-menu -->
+		<script src="js/classie.js"></script>
+		<script src="js/clipboard.min.js"></script>
+		<script>
+		(function() {
+			[].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+				var menuItems = menu.querySelectorAll('.menu__link'),
+					setCurrent = function(ev) {
+						ev.preventDefault();
+
+						var item = ev.target.parentNode; // li
+
+						// return if already current
+						if (classie.has(item, 'menu__item--current')) {
+							return false;
+						}
+						// remove current
+						classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+						// set current
+						classie.add(item, 'menu__item--current');
+					};
+
+				[].slice.call(menuItems).forEach(function(el) {
+					el.addEventListener('click', setCurrent);
+				});
+			});
+
+			[].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
+				link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+				new Clipboard(link);
+				link.addEventListener('click', function() {
+					classie.add(link, 'link-copy--animate');
+					setTimeout(function() {
+						classie.remove(link, 'link-copy--animate');
+					}, 300);
+				});
+			});
+		})(window);
+		</script>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script src="js/jquery.fitvids.js"></script>
+      <script>
+        // Basic FitVids Test
+        $(".vidcontainer").fitVids();
+        // Custom selector and No-Double-Wrapping Prevention Test
+        $(".vidcontainer").fitVids({ customSelector: "iframe[src^='http://socialcam.com']"});
+      </script>
+
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -70,6 +70,25 @@ a:focus {
   border-radius: 35px;
 }
 
+.modal {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) { 
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
 .imagewrap {display:inline-block;position:relative;}
 
 .left-side{
@@ -386,6 +405,18 @@ input[type=range]:focus::-ms-fill-upper {
 
 {
    #signin
+   {
+      display:none;
+      margin: 0 auto;
+   }
+
+   #group
+   {
+      display:none;
+      margin: 0 auto;
+   }
+
+   #oneonone
    {
       display:none;
       margin: 0 auto;

@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Welcome Home</title>
+	<title>Group Lunch</title>
 	
 	<link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
 	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
@@ -94,7 +94,7 @@
 			</section>
 	</div>
 	<div class="row">
-              <div class="well  well-sm col-md-12 text-center" ><h3 style="font-family: 'Roboto', sans-serif;">Lunch Details</h3>
+              <div class="well  well-sm col-md-12 text-center" ><h3 style="font-family: 'Roboto', sans-serif;">Group Lunch</h3>
               </div>
             </div>
 
@@ -159,22 +159,23 @@
 	</div>
 	<br>
 	<div class="row">
-	<div class="col-md-4 col-md-offset-4">
-	<button type="button" class="btn btn-primary custom-btn center-block" style="height: 40px;margin-bottom:10px;">Request Group Lunch</button>
+	<div class="col-md-4 col-md-offset-4 text-center">
+	<a href="restaurants.html" class="btn btn-primary" style="margin-bottom:10px;" role="button">Continue to Restaurant Options</a>
 	</div>
 	</div>
 </div>
 
 <div class="slide-menu">
     <nav class="slidemenu">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Upgrade to Premium</a></li>
-      <li><a href="#">Profile</a></li>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="payment.html">Upgrade to Premium</a></li>
+      <li><a href="profile.html">Profile</a></li>
       <li><a href="#">Settings</a></li>
-      <li><a href="#">Upcoming Lunches</a></li>
-      <li><a href="#">Pending Lunch Requests</a></li>
+      <li><a href="upcominglunches.html">Upcoming Lunches</a></li>
+      <li><a href="pendingrequests.html">Pending Lunch Requests</a></li>
+      <li><a href="rate.html">Rate & Connect</a></li>
       <li><a href="#">History</a></li>
-      <li><a href="#">Connected LunchMates</a></li>
+      <li><a href="connectedlunchmates.html">Connected LunchMates</a></li>
       <li><a href="#">My LM Reward Points</a></li>
       <li><a href="#">Help</a></li>
       <li><a href="#">About Us</a></li>
@@ -288,6 +289,22 @@
 			    infowindow.open(map, marker);
 			  });
 			}
+
+			$('.menu__item a').on('click',function() {           
+        window.location.href = "home.html";  // Change This
+		});
+		$('.menu__item1 a').on('click',function() {           
+        window.location.href = "profile.html";  // Change This
+		});
+		$('.menu__item2 a').on('click',function() {           
+        window.location.href = "#";  // Change This
+		});
+		$('.menu__item3 a').on('click',function() {           
+        window.location.href = "upcominglunches.html";  // Change This
+		});
+		$('.menu__item4 a').on('click',function() {           
+        window.location.href = "#";  // Change This
+		});
 		</script>
 
 		<script type="text/javascript">
