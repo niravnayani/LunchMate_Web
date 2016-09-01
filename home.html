@@ -19,11 +19,31 @@
 	<link rel="stylesheet" type="text/css" href="css/top-menu.css" />
     <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+	<script>$(window).load(function() {
+		$(".se-pre-con").fadeOut("slow");;
+		});
+	</script>
+
+	<style>
+		.no-js #loader { display: none;  }
+		.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+		.se-pre-con {
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			z-index: 9999;
+			background: url(images/Preloader_8.gif) center no-repeat #fff;
+		}
+	</style>
 	
 </head>
 
 <body>
-
+<div class="se-pre-con"></div>
 <div class="container-fluid">
     <div id="menu-container">
         <input id="toggle" type="checkbox"><label for="toggle" class="l"></label>
@@ -118,19 +138,19 @@
 			});
 		})(window);
 
-		$('.menu__item a').on('click',function() {           
+		$('.menu__item a').live('click',function() {           
         window.location.href = "home.html";  // Change This
 		});
-		$('.menu__item1 a').on('click',function() {           
+		$('.menu__item1 a').live('click',function() {           
         window.location.href = "profile.html";  // Change This
 		});
-		$('.menu__item2 a').on('click',function() {           
+		$('.menu__item2 a').live('click',function() {           
         window.location.href = "#";  // Change This
 		});
-		$('.menu__item3 a').on('click',function() {           
+		$('.menu__item3 a').live('click',function() {           
         window.location.href = "upcominglunches.html";  // Change This
 		});
-		$('.menu__item4 a').on('click',function() {           
+		$('.menu__item4 a').live('click',function() {           
         window.location.href = "#";  // Change This
 		});
 

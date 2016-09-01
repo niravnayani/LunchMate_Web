@@ -15,6 +15,20 @@
 	<link rel="stylesheet" type="text/css" href="css/top-menu.css" />
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 	<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+	<script>
+        function enableButton() {
+            document.getElementById("skip").disabled = false;
+            document.getElementById("connect").disabled = false;
+        }
+        function enableButton1() {
+            document.getElementById("skip1").disabled = false;
+            document.getElementById("connect1").disabled = false;
+        }
+        function enableButton2() {
+            document.getElementById("skip2").disabled = false;
+            document.getElementById("connect2").disabled = false;
+        }
+    </script>
 
 </head>
 
@@ -29,7 +43,7 @@
   			<section class="section section--menu" id="Prospero">
 				<nav class="menu menu--prospero">
 					<ul class="menu__list" id="menu-list">
-						<li class="menu__item menu__item--current"><a href="#" class="menu__link">Home</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Home</a></li>
 						<li class="menu__item1"><a href="#" class="menu__link">Profile</a></li>
 						<li class="menu__item2"><a href="#" class="menu__link">Settings</a></li>
 						<li class="menu__item3"><a href="#" class="menu__link">Upcoming Lunches</a></li>
@@ -39,11 +53,10 @@
 			</section>
 	</div>
     <div class="row">
-              <div class="well  well-sm col-md-12 text-center" ><h3 style="font-family: 'Roboto', sans-serif;">Rate & Connect</h3>
-              </div>
-            </div>
+      <div class="well  well-sm col-md-12 text-center" ><h3 style="font-family: 'Roboto', sans-serif;">Rate & Connect</h3>
+      </div>
+    </div>
 	
-	<br>
 	<br>
     
     <div class="row">
@@ -51,8 +64,8 @@
 	  		<p>Stevie</p>
 	  		<div class="imagewrap">
 		  		<img src="images/profilepic.jpg" class="img-rounded" style="width:250px;height:150px;">
-		  		<button type="button" class="btn btn-danger btn-circle btn-lg  left-side"><i class="glyphicon glyphicon-remove"></i></button>
-		  		<button type="button" class="btn btn-success btn-circle btn-lg right-side"><i class="glyphicon glyphicon-ok"></i></button>
+		  		<button type="button" id="skip" class="btn btn-danger btn-circle btn-lg left-side" disabled><i class="glyphicon glyphicon-remove"></i></button>
+		  		<button type="button" id="connect" class="btn btn-success btn-circle btn-lg right-side" disabled><i class="glyphicon glyphicon-ok"></i></button>
 	  		</div>
 	  		<div class="row" style="margin-top:30px;margin-bottom:10px;">
 		  		<table class="table">
@@ -75,24 +88,24 @@
 					        		<div id="stars" class="starrr" style="font-size:medium;"></div>
 								</div></td>
 				      </tr>
-				      <tr>
-				        <td style="padding: 0px;border:none;">
-				        	<button type="button" class="btn btn-success">Submit</button>
-				        </td>
-				        <td style="padding: 0px;border:none;">
-				        	<button type="button" class="btn btn-danger">Report</button>
-				        </td>
-				      </tr>
 				    </tbody>
 			  	</table>
+			  	<div class="row">
+			  		<button type="button" class="btn btn-success" onclick="enableButton()">Submit</button>
+			  	</div>
+			  	<br>
+			  	<div class="row">
+			  		<button type="button" class="btn btn-danger">Report</button>
+			  	</div>
 	  		</div>
   		</div>
+
   		<div class="col-md-4 text-center" >
 	  		<p>Stevie</p>
 	  		<div class="imagewrap">
 		  		<img src="images/profilepic.jpg" class="img-rounded" style="width:250px;height:150px;">
-		  		<button type="button" class="btn btn-danger btn-circle btn-lg  left-side"><i class="glyphicon glyphicon-remove"></i></button>
-		  		<button type="button" class="btn btn-success btn-circle btn-lg right-side"><i class="glyphicon glyphicon-ok"></i></button>
+		  		<button type="button" id="skip1" class="btn btn-danger btn-circle btn-lg left-side" disabled><i class="glyphicon glyphicon-remove"></i></button>
+		  		<button type="button" id="connect1" class="btn btn-success btn-circle btn-lg right-side" disabled><i class="glyphicon glyphicon-ok"></i></button>
 	  		</div>
 	  		<div class="row" style="margin-top:30px;margin-bottom:10px;">
 		  		<table class="table">
@@ -115,24 +128,24 @@
 					        		<div id="stars" class="starrr" style="font-size:medium;"></div>
 								</div></td>
 				      </tr>
-				      <tr>
-				        <td style="padding: 0px;border:none;">
-				        	<button type="button" class="btn btn-success">Submit</button>
-				        </td>
-				        <td style="padding: 0px;border:none;">
-				        	<button type="button" class="btn btn-danger">Report</button>
-				        </td>
-				      </tr>
 				    </tbody>
 			  	</table>
+			  	<div class="row">
+			  		<button type="button" class="btn btn-success" onclick="enableButton1()">Submit</button>
+			  	</div>
+			  	<br>
+			  	<div class="row">
+			  		<button type="button" class="btn btn-danger">Report</button>
+			  	</div>
 	  		</div>
   		</div>
+
   		<div class="col-md-4 text-center" >
 	  		<p>Stevie</p>
 	  		<div class="imagewrap">
 		  		<img src="images/profilepic.jpg" class="img-rounded" style="width:250px;height:150px;">
-		  		<button type="button" class="btn btn-danger btn-circle btn-lg  left-side"><i class="glyphicon glyphicon-remove"></i></button>
-		  		<button type="button" class="btn btn-success btn-circle btn-lg right-side"><i class="glyphicon glyphicon-ok"></i></button>
+		  		<button type="button" id="skip2" class="btn btn-danger btn-circle btn-lg left-side" disabled><i class="glyphicon glyphicon-remove"></i></button>
+		  		<button type="button" id="connect2" class="btn btn-success btn-circle btn-lg right-side" disabled><i class="glyphicon glyphicon-ok"></i></button>
 	  		</div>
 	  		<div class="row" style="margin-top:30px;margin-bottom:10px;">
 		  		<table class="table">
@@ -155,16 +168,15 @@
 					        		<div id="stars" class="starrr" style="font-size:medium;"></div>
 								</div></td>
 				      </tr>
-				      <tr>
-				        <td style="padding: 0px;border:none;">
-				        	<button type="button" class="btn btn-success">Submit</button>
-				        </td>
-				        <td style="padding: 0px;border:none;">
-				        	<button type="button" class="btn btn-danger">Report</button>
-				        </td>
-				      </tr>
 				    </tbody>
 			  	</table>
+			  	<div class="row">
+			  		<button type="button" class="btn btn-success" onclick="enableButton2()">Submit</button>
+			  	</div>
+			  	<br>
+			  	<div class="row">
+			  		<button type="button" class="btn btn-danger">Report</button>
+			  	</div>
 	  		</div>
   		</div>
 	</div>
